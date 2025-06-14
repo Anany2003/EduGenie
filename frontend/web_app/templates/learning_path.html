@@ -1,0 +1,23 @@
+<!-- frontend/web_app/templates/learning_path.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Learning Path – EduGenie</title>
+</head>
+<body>
+  <h1>Personalized Plan for {{ student_id }}</h1>
+
+  {% if topics %}
+    <p>We've identified the following topics for review:</p>
+    <ul>
+      {% for topic in topics %}
+        <li>{{ topic }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Awesome! You seem to be on track. Let’s move to enrichment material soon.</p>
+  {% endif %}
+
+  <a href="/">Back to Home</a>
+</body>
+</html>

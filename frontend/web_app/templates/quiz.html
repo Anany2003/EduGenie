@@ -1,0 +1,24 @@
+<!-- frontend/web_app/templates/quiz.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz – EduGenie</title>
+</head>
+<body>
+  <h1>Math Quiz for {{ student_id }}</h1>
+  <form action="/submit-quiz" method="post">
+    <input type="hidden" name="student_id" value="{{ student_id }}">
+
+    <p>1. Solve: x² - 5x + 6 = 0</p>
+    <label><input type="radio" name="q1" value="A"> x = 2 or 3</label><br>
+    <label><input type="radio" name="q1" value="B"> x = 1 or 6</label><br>
+
+    <p>2. What is the slope of y = 3x + 1?</p>
+    <label><input type="radio" name="q2" value="A"> 3</label><br>
+    <label><input type="radio" name="q2" value="B"> 1</label><br>
+
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
